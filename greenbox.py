@@ -11,7 +11,7 @@ def change_time():
 
 
 commit_date = (start + change_time())
-times = randint(0, 5)
+times = randint(5, 30)
 
 while commit_date < now:
     for i in range(times):
