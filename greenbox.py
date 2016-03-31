@@ -14,7 +14,7 @@ commit_date = (start + change_time())
 times = randint(1, 3)
 
 # while commit_date < now:
-with open('data.txt', 'w') as f:
+with open('data.txt', 'a+') as f:
     for i in range(times):
         commit_date = commit_date + change_time()
         f.writelines(commit_date.isoformat())
