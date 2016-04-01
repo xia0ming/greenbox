@@ -13,14 +13,12 @@ def change_time():
 commit_date = (start + change_time())
 times = randint(1, 3)
 
-# while commit_date < now:
+while commit_date < now:
+    for i in range(times):
+        f = open('data.txt', 'a+')
+        commit_date = commit_date + change_time()
+        f.writelines(commit_date.isoformat() + '\n')
+        f.close()
+        os.system('git add .')
+        os.system('git commit --date={time} -m "Update {time}"'.format(time=commit_date.isoformat()))
 
-for i in range(times):
-    f = open('data.txt', 'a+')
-    commit_date = commit_date + change_time()
-    f.writelines(commit_date.isoformat() + '\n')
-    f.close()
-    os.system('git add .')
-    os.system('git commit --date={time} -m "Update {time}"'.format(time=commit_date.isoformat()))
-
-# os.system()
