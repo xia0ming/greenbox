@@ -6,7 +6,7 @@ Generate green box for fun
 
 1. fork
 2. clone
-3. run `python greenbox`
+3. run `python greenbox.py`
 4. push
 
 ## result
